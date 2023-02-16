@@ -49,7 +49,7 @@ const DetailsPage = () => {
                                 <h6>Event Info</h6>
                                 <Row>
                                     {article.events.map((ev) => (
-                                        <Col>
+                                        <Col key={ev.id}>
                                             <p>ID: {ev.id}</p>
                                             <p>Provider: {ev.provider}</p>
                                         </Col>
@@ -62,7 +62,7 @@ const DetailsPage = () => {
                                 <h6>Launch Info</h6>
                                 <Row>
                                     {article.launches.map((l) => (
-                                        <Col>
+                                        <Col key={l.id}>
                                             <p>ID: {l.id}</p>
                                             <p>Provider: {l.provider}</p>
                                         </Col>
