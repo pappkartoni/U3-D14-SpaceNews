@@ -26,7 +26,7 @@ const DetailsPage = () => {
 
     useEffect(() => {
         getArticle()
-    }, [])
+    }, [id])
 
     return (
         <section>
