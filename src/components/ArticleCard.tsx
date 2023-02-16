@@ -23,10 +23,6 @@ const ArticleCard = (props: ArticleCardProps) => {
                             <Card.Body>
                                 <Card.Title>{a.title} {a.featured ? "Feat" : ""}</Card.Title>
                                 <Card.Subtitle>by {a.newsSite}</Card.Subtitle>
-    {/*                             <Card.Text>
-                                    {a.summary}...
-                                    <Link to={a.url}>READ MORE</Link>
-                                </Card.Text> */}
                             </Card.Body>
                         </Col>
                     </Row>
