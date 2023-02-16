@@ -13,7 +13,6 @@ const DetailsPage = () => {
     const getArticle = async () => {
         try {
             const res = await fetch(url + id)
-            console.log(article)
             if (res.ok) {
                 const data = await res.json()
                 setArticle(data)
@@ -72,7 +71,7 @@ const DetailsPage = () => {
                         }
                         <span className='text-muted'>
                             <>
-                                Published: {article.publishedAt} - Updated: {article.updatedAt}
+                                Published: {format(parseISO(article.publishedAt.toString()), "dd.MM.yyyy 'at' HH:mm")} - Updated: {format(new Date(article.updatedAt.toString()), "dd.MM.yyyy 'at' HH:mm")}
                             </>
                         </span>
                     </Card.Body>
