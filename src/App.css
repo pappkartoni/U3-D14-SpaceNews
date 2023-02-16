@@ -66,3 +66,9 @@ a, a:hover {
 .details .h6 {
     margin-bottom: 1.25em;
 }
+
+.rando {
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}

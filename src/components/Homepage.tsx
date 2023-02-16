@@ -32,7 +32,7 @@ const Homepage = () => {
                 <h1>Funky space news right here!</h1>
                 <Row>
                     {articles.map((a) => (
-                        <ArticleCard article={a} />
+                        <ArticleCard key={a.id} article={a} />
                     ))}
                 </Row>
             </Container>

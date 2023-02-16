@@ -3,6 +3,7 @@ import { Container, Card, Row, Col } from 'react-bootstrap'
 import { Link } from "react-router-dom"
 import { IArticle } from '../interfaces/IArticle'
 import { useParams } from "react-router"
+import { format, parseISO } from 'date-fns'
 
 const DetailsPage = () => {
     const url: string = "https://api.spaceflightnewsapi.net/v3/articles/"
@@ -12,7 +13,7 @@ const DetailsPage = () => {
     const getArticle = async () => {
         try {
             const res = await fetch(url + id)
-
+            console.log(article)
             if (res.ok) {
                 const data = await res.json()
                 setArticle(data)
